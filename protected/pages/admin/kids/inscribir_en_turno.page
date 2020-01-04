@@ -1,0 +1,175 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+
+    <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="98%">
+        <com:TTableRow VerticalAlign="Top">
+            <com:TTableCell HorizontalAlign="Center" VerticalAlign="Top">                
+                 <fieldset Align="Center" width="80%">
+                    <legend>Reservación de Horario de Clases.</legend>
+                        <com:TTable BorderWidth="1" CellPadding="0" CellSpacing="0" GridLines="Both" Width="98%">
+                            <com:TTableRow VerticalAlign="Top">
+                                <com:TTableCell Width="20%">
+                                    <com:TLabel Text="Datos de la Clase:"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3">
+                                    Todos los: <com:TLabel ID="lbldia" Text="XXX"/>,
+                                    del: <com:TLabel ID="lbldesde" Text="XXX"/>
+                                    al: <com:TLabel ID="lblhasta" Text="XXX"/>
+                                    a las: <com:TLabel ID="lblhora" Text="XXX"/>,
+                                    Salón: <com:TLabel ID="lblsalon" Text="XXX"/>,
+                                    Código Turno: <com:TActiveLabel ID="lblcodclase" Text=""/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+                            <com:TTableRow VerticalAlign="Top">
+                                <com:TTableCell>
+                                    <com:TLabel Text="C&eacute;dula:"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3">
+                                    <com:TActiveTextBox 
+                                        ID="txt_cedula"
+                                        Columns="20"
+                                        AutoPostBack="True"
+                                        OnCallback="comprobar_cedula"/> &nbsp; &nbsp;<com:TActiveLabel ID="lblnombre" Text="Coloque la Cédula y presione ENTER"/>
+                                    <com:TRequiredFieldValidator ID="val_cedula"
+                                        ControlToValidate="txt_cedula"
+                                        ErrorMessage="Requerido."
+                                        Display="Dynamic"
+                                        ValidationGroup="2"
+                                        />
+                                </com:TTableCell>
+                            </com:TTableRow>
+        <com:TTableRow>
+            <com:TTableCell ColumnSpan="4" HorizontalAlign="Right" VerticalAlign="Top">
+                <div align="center">
+                 <fieldset Align="Center" width="80%">
+                    <legend>Menores de Edad.</legend>
+                        <com:XActiveDataGrid
+                            ID="DataGrid2"
+                            Width="95%"
+                            PagerStyle.Mode="Numeric"
+                            PagerStyle.HorizontalAlign="Center"
+                            PageSize="20"
+                            CellPadding="0"
+                            CellSpacing="0"
+                            GridLines="None"
+                            HeaderStyle.BackColor="#29166F"
+                            HeaderStyle.ForeColor="white"
+                            HeaderStyle.Font.Size = "12px"
+                            ItemStyle.BackColor="#BFCFFF"
+                            ItemStyle.BorderColor="Black"
+                            ItemStyle.Font.Size = "10px"
+                            DataKeyField="id"
+                            AlternatingItemStyle.BackColor="#E6ECFF"
+                            AutoGenerateColumns="false"
+                            ForeColor="black"
+                            OnItemDataBound="formatear2"
+                            BorderColor="black"
+                            >
+
+                            <com:XActiveBoundColumn
+                                ID="codigo2"
+                                DataField="cod_menor"
+                                HeaderText="Código"
+                                HeaderStyle.Width="60px"
+                                ItemStyle.HorizontalAlign="Center"
+                                />
+
+                            <com:XActiveBoundColumn
+                                ID="nombre2"
+                                DataField="nombres"
+                                HeaderText="Nombres"/>
+
+                            <com:XActiveBoundColumn
+                                ID="apellido2"
+                                DataField="apellidos"
+                                HeaderText="Apellidos"/>
+
+                                <com:XActiveTemplateColumn
+                                ID="detalle2"
+                                HeaderText="Acciones"
+                                HeaderStyle.Width="60px"
+                                ItemStyle.HorizontalAlign="Center"
+                                >
+                                    <prop:ItemTemplate>
+                                        <com:TActiveLinkButton ID="add" CommandParameter="<%# $this->Parent->DataItem['cod_menor'] %>" Text="<img src='imagenes/iconos/add.png' border='0' />" OnClick="Page.inscribir" />
+                                    </prop:ItemTemplate>
+                                </com:XActiveTemplateColumn>
+
+                        </com:XActiveDataGrid>
+                    <br>
+                </fieldset>
+                </div>
+            </com:TTableCell>
+        </com:TTableRow>
+                            <com:TTableRow>
+                                <com:TTableCell ColumnSpan="4" HorizontalAlign="Right">
+                                    <com:TActiveLinkButton ID="cerrar"  Width="32px" Height="32px" Text="<img src='imagenes/botones/boton_cancel.png' border='0' width='32px' height='32px'/>" OnClick="Page.cancelar_click" CausesValidation="False" />
+                                    <com:TActiveLinkButton ID="incluir" Width="32px" Height="32px" Text="<img src='imagenes/botones/boton_ok.png' border='0' width='32px' height='32px'/>" OnClick="Page.incluir_estudiante" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+                        </com:TTable>
+                </fieldset>
+           </com:TTableCell>
+       </com:TTableRow>
+        <com:TTableRow>
+            <com:TTableCell ColumnSpan="4" HorizontalAlign="Right" VerticalAlign="Top">
+                <com:DMessagesPanel ID="mensaje" DefaultHideEffect="SwitchOff" />
+                <div align="center">
+                 <fieldset Align="Center" width="80%">
+                    <legend>Listado de Estudiantes en esta Clase.</legend>
+                        <com:XActiveDataGrid
+                            ID="DataGrid"
+                            Width="95%"
+                            PagerStyle.Mode="Numeric"
+                            PagerStyle.HorizontalAlign="Center"
+                            PageSize="20"
+                            CellPadding="0"
+                            CellSpacing="0"
+                            GridLines="None"
+                            HeaderStyle.BackColor="#29166F"
+                            HeaderStyle.ForeColor="white"
+                            HeaderStyle.Font.Size = "12px"
+                            ItemStyle.BackColor="#BFCFFF"
+                            ItemStyle.BorderColor="Black"
+                            ItemStyle.Font.Size = "10px"
+                            DataKeyField="id"
+                            AlternatingItemStyle.BackColor="#E6ECFF"
+                            AutoGenerateColumns="false"
+                            ForeColor="black"
+                            BorderColor="black"
+                            OnItemCreated="itemCreated"
+                            OnItemDataBound="formatear"
+                            >
+
+                            <com:XActiveBoundColumn
+                                ID="nombre"
+                                DataField="nombres"
+                                HeaderText="Nombres"/>
+
+                            <com:XActiveBoundColumn
+                                ID="apellido"
+                                DataField="apellidos"
+                                HeaderText="Apellidos"/>
+                                
+                                <com:XActiveTemplateColumn
+                                ID="detalle"
+                                HeaderText="Acciones"
+                                HeaderStyle.Width="60px"
+                                ItemStyle.HorizontalAlign="Center"
+                                >
+                                    <prop:ItemTemplate>
+                                        <com:TActiveLinkButton ID="finaliza" CommandParameter="<%# $this->Parent->DataItem['idta'] %>" Text="<img src='imagenes/iconos/rechazar.png' border='0' />" OnClick="Page.eliminar_estudiante" />
+                                    </prop:ItemTemplate>
+                                </com:XActiveTemplateColumn>
+
+                        </com:XActiveDataGrid>
+                    <br>
+                </fieldset>
+                </div>
+            </com:TTableCell>
+        </com:TTableRow>
+   </com:TTable>
+</div>
+
+
+</com:TContent>

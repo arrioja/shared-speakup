@@ -1,0 +1,211 @@
+<com:TContent ID="cuerpo">
+
+    <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="98%">
+        <com:TTableRow VerticalAlign="Top">
+           
+            <com:TTableCell  HorizontalAlign="Center">
+
+                <div class="zxwidth_u">
+                    <b class="zxtop"><b class="zxb1"></b><b class="zxb2 zcolor_c"></b><b class="zxb3 zcolor_c"></b><b class="zxb4 zcolor_c"></b></b>
+                    <div class="zxboxcontent ">
+                        <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="Both" Width="100%">
+                            <com:TTableRow>
+                                <com:TTableCell Width=<%= $this->Page->ancho_hora %> CssClass="encabezado_claro_1">
+                                     Hora
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" Width=<%= $this->Page->ancho_encabezado %> CssClass="encabezado_claro_1">
+                                     Lunes<br>
+                                     <com:TActiveLabel ID="lbl_lunes" Text=<%= $this->Page->lunes %>/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" Width=<%= $this->Page->ancho_encabezado %> CssClass="encabezado_claro_1">
+                                     Martes<br>
+                                     <com:TActiveLabel ID="lbl_martes" Text=<%= $this->Page->martes %> />
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" Width=<%= $this->Page->ancho_encabezado %> CssClass="encabezado_claro_1">
+                                     Miércoles<br>
+                                     <com:TActiveLabel ID="lbl_miercoles" Text=<%= $this->Page->miercoles %>/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" Width=<%= $this->Page->ancho_encabezado %> CssClass="encabezado_claro_1">
+                                     Jueves<br>
+                                     <com:TActiveLabel ID="lbl_jueves" Text=<%= $this->Page->jueves %> />
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" Width=<%= $this->Page->ancho_encabezado %> CssClass="encabezado_claro_1">
+                                     Viernes<br>
+                                     <com:TActiveLabel ID="lbl_viernes" Text=<%= $this->Page->viernes %>/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" Width=<%= $this->Page->ancho_encabezado %> CssClass="encabezado_claro_1">
+                                     Sábado<br>
+                                     <com:TActiveLabel ID="lbl_sabado" Text=<%= $this->Page->sabado %>/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+                            <com:TTableRow>
+                                <com:TTableCell ColumnSpan="18">
+
+                            <com:TRepeater
+                                ID="repeater_horas" >
+                                <prop:HeaderTemplate>
+
+                                </prop:HeaderTemplate>
+
+                                <prop:ItemTemplate>
+                                
+                                    <com:TTableRow>
+                                        <com:TTableCell Width=<%= $this->Page->ancho_hora %>  CssClass="encabezado_claro_1">
+                                             <%#$this->Data['horas'] %>
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[0][1]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],0,1,$this->Data[0][1]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[0][1]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[0][2]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],0,2,$this->Data[0][2]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[0][2]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[0][3]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],0,3,$this->Data[0][3]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[0][3]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[1][1]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],1,1,$this->Data[1][1]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[1][1]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[1][2]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],1,2,$this->Data[1][2]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[1][2]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[1][3]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],1,3,$this->Data[1][3]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[1][3]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[2][1]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],2,1,$this->Data[2][1]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[2][1]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[2][2]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],2,2,$this->Data[2][2]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[2][2]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[2][3]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],2,3,$this->Data[2][3]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[2][3]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[3][1]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],3,1,$this->Data[3][1]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[3][1]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[3][2]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],3,2,$this->Data[3][2]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[3][2]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[3][3]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],3,3,$this->Data[3][3]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[3][3]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[4][1]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],4,1,$this->Data[4][1]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[4][1]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[4][2]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],4,2,$this->Data[4][2]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[4][2]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[4][3]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],4,3,$this->Data[4][3]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[4][3]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[5][1]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],5,1,$this->Data[5][1]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[5][1]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[5][2]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],5,2,$this->Data[5][2]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[5][2]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                        <com:TTableCell Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> BackColor= <%#$this->Data[5][3]['color'] %> >
+                                            <com:TActiveLinkButton Width=<%= $this->Page->ancho %> Height=<%= $this->Page->alto %> CommandParameter="<%# array($this->Data['horas'],5,3,$this->Data[5][3]['cod_clase']) %>" Text="<img src='imagenes/class_board/<%#$this->Data[5][3]['imagen'] %>' border='0' width='<%= $this->Page->ancho %>' height='<%= $this->Page->alto %>'/>" OnClick="Page.reservar_clase" CausesValidation="False" />
+                                        </com:TTableCell>
+                                    </com:TTableRow>
+                                
+                                </prop:ItemTemplate>
+
+                                <prop:FooterTemplate>
+                       
+
+                        
+                                </prop:FooterTemplate>
+
+
+                            </com:TRepeater>
+                                </com:TTableCell>
+                            </com:TTableRow>
+                            <com:TTableRow BorderStyle="0" BorderWidth="0">
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                    <com:TActiveLinkButton Width="32px" Height="32px" Text="<img src='imagenes/iconos/ir_izquierda.png' border='0' width='32px' height='32px'/>" OnClick="Page.ir_izquierda" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="13"  CssClass="encabezado_claro_1">
+                                    <com:TActiveLinkButton Width="32px" Height="32px" Text="<img src='imagenes/iconos/ir_actual.png' border='0' width='32px' height='32px'/>" OnClick="Page.ir_actual" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                    <com:TActiveLinkButton Width="32px" Height="32px" Text="<img src='imagenes/iconos/ir_derecha.png' border='0' width='32px' height='32px'/>" OnClick="Page.ir_derecha" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+                       </com:TTable>
+
+                    </div>
+                    <b class="zxbottom"><b class="zxb4"></b><b class="zxb3"></b><b class="zxb2"></b><b class="zxb1"></b></b>
+                </div>
+
+
+            </com:TTableCell>
+
+        </com:TTableRow>
+    </com:TTable>
+
+<div align="center">
+
+        <com:XActiveDataGrid
+            ID="DataGrid"
+            Width="90%"
+            PagerStyle.Mode="Numeric"
+            PagerStyle.HorizontalAlign="Center"
+            PageSize="20"
+            CellPadding="0"
+            CellSpacing="0"
+            GridLines="None"
+            HeaderStyle.BackColor="#29166F"
+            HeaderStyle.ForeColor="white"
+            HeaderStyle.Font.Size = "12px"
+            ItemStyle.BackColor="#BFCFFF"
+            ItemStyle.BorderColor="Black"
+            ItemStyle.Font.Size = "10px"
+            DataKeyField="id"
+            AlternatingItemStyle.BackColor="#E6ECFF"
+            AutoGenerateColumns="false"
+            ForeColor="black"
+            Caption="Artículos Marcados como Interesantes (Favoritos)"
+            BorderColor="black"
+            OnItemCreated="itemCreated"
+            OnItemDataBound="formatear"
+            >
+                <com:XActiveTemplateColumn
+                ID="imagen"
+                HeaderText="Imágen"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderStyle.Width="30px"
+                >
+                    <prop:ItemTemplate>
+                        <com:TActiveImage Height="30px" Width="30px" ImageUrl=<%# $this->Parent->DataItem['imagen_1'] %> />
+                    </prop:ItemTemplate>
+                </com:XActiveTemplateColumn>
+
+            <com:XActiveBoundColumn
+                ID="titulo"
+                DataField="titulo"
+                HeaderText="Artículo"/>
+
+            <com:XActiveBoundColumn
+                ID="precio"
+                DataField="precio"
+                HeaderText="Precio (Bs.F)"
+                ItemStyle.HorizontalAlign="Right"/>
+
+                <com:XActiveTemplateColumn
+                ID="detalle"
+                HeaderText="Acciones"
+                ItemStyle.HorizontalAlign="Center"
+                >
+                    <prop:ItemTemplate>
+                        <com:TActiveLinkButton Display="Dynamic" CommandParameter="<%# $this->Parent->DataItem['cod_articulo'] %>" Text="<img alt='Ver' src='imagenes/iconos/detalle.png' border='0' />" OnClick="Page.ver_articulo" />
+                        <com:TActiveLinkButton ID="finaliza" CommandParameter="<%# $this->Parent->DataItem['cod_articulo'] %>" Text="<img src='imagenes/iconos/rechazar.png' border='0' />" OnClick="Page.eliminar_favorito" />
+                    </prop:ItemTemplate>
+                </com:XActiveTemplateColumn>
+
+        </com:XActiveDataGrid>
+
+
+    <br>
+</div>
+</com:TContent>

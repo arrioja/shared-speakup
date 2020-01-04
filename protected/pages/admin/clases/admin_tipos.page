@@ -1,0 +1,96 @@
+<com:TContent ID="cuerpo">
+<div  id="loading" style="display:none;     width: 90%;
+     text-align: center;
+    "
+				><img ID='loading' src='imagenes/iconos/loadinfo.gif'>
+			</div>
+<div align="center">
+ <fieldset Align="Center" width="80%">
+    <legend>Tipos de clases dictadas en Speakup.</legend>
+    <com:TTable BorderWidth="1" GridLines="Both" Width="90%">
+
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="Tipo de Clase:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1" >
+                <com:TTextBox ID="txt_nombre" Columns="50" MaxLength="50"/>
+                <com:TRequiredFieldValidator
+                    ControlToValidate="txt_nombre"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"/>
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow>
+            <com:TTableCell HorizontalAlign="Right" ColumnSpan="4">
+                <com:TButton ID="btn_incluir"
+                    Text="Incluir"
+                    OnClick="btn_incluir_click"/>
+            </com:TTableCell>
+        </com:TTableRow>
+    </com:TTable>
+
+<div align="center">
+<com:XActiveDataGrid
+Caption="Tipos de Clases"
+	ID="DataGrid"
+	AllowPaging="False"
+	Width="90%"
+	PageSize="24"
+	PagerStyle.Mode="Numeric"
+	CellPadding="0"
+	CellSpacing="0"
+	GridLines="Both"
+	DataKeyField="id"
+	HeaderStyle.BackColor="#29166F"
+	HeaderStyle.ForeColor="white"
+	ItemStyle.BackColor="#BFCFFF"
+    ItemStyle.BorderColor="white"
+	AlternatingItemStyle.BackColor="#E6ECFF"
+    OnItemCreated="itemCreated"
+	AutoGenerateColumns="false"
+    EmptyTemplate="<div style='font-size:14px;
+                           color:#FF0000;
+                           height:100px;
+                           font-weight:bold;
+                           vertical-align:middle;
+                           padding-top:40px;'>
+                <br>
+                Aún no existen Tipos de Clases Registradas.</div>">
+
+
+  >
+
+          <prop:ClientSide
+              OnLoading="Element.show('loading')"
+              OnComplete="Element.hide('loading')"
+            />
+
+		<com:XActiveBoundColumn
+		ID="descripcion"
+		HeaderText="Descripción del Tipo de Clase Dictada"
+		DataField="descripcion"
+		HeaderStyle.Width="120px"
+        ItemStyle.HorizontalAlign="Left"
+
+		/>
+
+         <com:XActiveTemplateColumn
+		ID="eliminar"
+		HeaderText="Eliminar"
+		ItemStyle.HorizontalAlign="Center"
+		HeaderStyle.Width="50px"
+		>
+            <prop:ItemTemplate>             
+                <com:TActiveLinkButton CausesValidation="False" ID="elimina_salon" CommandParameter="<%# $this->Parent->DataItem['id'] %>" Text="<img src='imagenes/iconos/rechazar.png' border='0' />" OnClick="Page.eliminar_salon" />
+			</prop:ItemTemplate>
+        </com:XActiveTemplateColumn>
+
+
+</com:XActiveDataGrid>
+</div>
+
+</fieldset>
+</div>
+</com:TContent>

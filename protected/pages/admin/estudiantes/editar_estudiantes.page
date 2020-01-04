@@ -1,0 +1,284 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+ <fieldset Align="Center" width="80%">
+    <legend>Inclusi&oacute;n de Estudiantes.</legend>
+<com:DMessagesPanel ID="mensaje" DefaultHideEffect="SwitchOff" />
+    <table Width="70%" aling="center" border="1">
+        <tr >
+            <td ColSpan="4" align="center">
+                <com:TLabel Text="C&eacute;dula:"/>
+
+                <com:TTextBox ID="txt_cedula" Columns="20" AutoPostBack="false"/>
+                <com:TRequiredFieldValidator ID="val_cedula"
+                    ControlToValidate="txt_cedula"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"
+                    ValidationGroup="2"
+                    />
+             </td>
+        </tr>
+
+        <tr >
+            <td Align="left">
+                <com:TLabel Text="Nombres:"/>
+            </td>
+            <td >
+                <com:TActiveTextBox ID="txt_nombres"
+                    Columns="20"
+                    />
+                <com:TRequiredFieldValidator ID="val_nombres"
+                    ControlToValidate="txt_nombres"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"
+                    ValidationGroup="2"/>
+            </td>
+            <td Align="left">
+                <com:TLabel Text="Apellidos:"/>
+            </td>
+            <td>
+                <com:TActiveTextBox ID="txt_apellidos"
+
+                    Columns="20"
+                    />
+                <com:TRequiredFieldValidator ID="val_apellidos"
+                    ControlToValidate="txt_apellidos"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"
+                    ValidationGroup="2"/>
+            </td>
+        </tr>
+ <tr>
+            <td Align="left">
+                <com:TLabel Text="fecha Nacimiento"/>
+            </td>
+            <td>
+ <com:TActiveDatePicker ID="fecha_nac" DateFormat="dd/MM/yyyy"
+                    UpToYear="<%= @date('Y') %>"
+                    InputMode="TextBox"
+                    Mode="ImageButton"
+                    Columns="10"/>
+            </td>
+            <td Align="left">
+                <com:TLabel Text="edad"/>
+            </td>
+            <td>
+                <com:TActiveTextBox ID="txt_edad"
+                Columns="5" MaxLength="2"
+                    />
+       <!--solo enteros-->
+        <com:TDataTypeValidator
+            ControlToValidate="txt_edad"
+            DataType="Integer"
+            Text="S&oacute;lo Enteros"
+            Display="Dynamic"
+            ValidationGroup="2"/>
+            </td>
+        </tr>
+
+        <tr >
+            <td>
+                <com:TLabel Text="Contrato"/>
+            </td>
+           <td ColumnSpan="3">
+           <com:TTextBox ID="txt_contrato" Columns="10"/>
+        <com:TRequiredFieldValidator
+            ControlToValidate="txt_contrato"
+            ErrorMessage="Requerido!"
+            Display="Dynamic"
+            ValidationGroup="2"/>
+
+        </td>
+
+            <td>
+                <com:TLabel Text="Programa"/>
+            </td>
+
+           <td ColumnSpan="3">
+           <com:TActiveDropDownList ID="drop_programa"
+         DataValueField="programa"
+         DataTextField="programa"
+        ></com:TActiveDropDownList>
+            </td>
+
+        </tr>
+
+<tr>
+    <td colspan="4" align="center">
+        <span>Niveles Adquiridos:</span>
+
+        <com:TActiveDropDownList ID="drop_niveles_adquiridos">
+            <com:TListItem Text="1" Value="1" />
+            <com:TListItem Text="2" Value="2" />
+            <com:TListItem Text="3" Value="3" />
+        </com:TActiveDropDownList>
+    </td>
+</tr>
+<tr >
+    <td>
+        <span>Nivel Inicio</span>
+    </td>
+    <td>
+        <com:TActiveDropDownList ID="drop_nivel_inicio"
+        DataValueField="nivel"
+        DataTextField="nivel"
+        >
+
+        </com:TActiveDropDownList>
+    </td>
+
+    <td>
+        <span>Nivel Final</span>
+    </td>
+    <td>
+        <com:TActiveDropDownList ID="drop_nivel_fin"
+        DataValueField="nivel"
+        DataTextField="nivel"
+        >
+
+        </com:TActiveDropDownList>
+    </td>
+</tr>
+
+<tr >
+    <td>
+        <span>Nivel Actual</span>
+    </td>
+    <td>
+        <com:TActiveDropDownList ID="drop_nivel_actual"
+        DataValueField="nivel"
+        DataTextField="nivel"
+        >
+
+        </com:TActiveDropDownList>
+    </td>
+    <td>
+        <span>Status</span>
+    </td>
+    <td>
+        <com:TActiveDropDownList ID="drop_status"
+        DataValueField="status"
+        DataTextField="status"
+        >
+
+        </com:TActiveDropDownList>
+    </td>
+</tr>
+<tr >
+    <td>
+        <span>Fecha de Inicio</span>
+    </td>
+    <td>
+        <com:TActiveDatePicker ID="fecha_ini" DateFormat="dd/MM/yyyy"
+                    UpToYear="<%= @date('Y') %>"
+                    InputMode="TextBox"
+                    Mode="ImageButton"
+                    Columns="10"/>
+    </td>
+
+    <td>
+        <span>Locación</span>
+    </td>
+    <td>
+        <com:TActiveDropDownList ID="drop_locaciones"
+        DataValueField="locacion"
+        DataTextField="locacion"
+        >
+
+        </com:TActiveDropDownList>
+    </td>
+</tr>
+ <tr>
+            <td Align="left">
+                <com:TLabel Text="Tlf Celular:"/>
+            </td>
+            <td ColumnSpan="3">
+                <com:TActiveTextBox ID="txt_tlf_celular"
+                    Columns="20"
+                    />
+                <com:TRequiredFieldValidator ID="val_tlf1"
+                    ControlToValidate="txt_tlf_celular"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"
+                    ValidationGroup="2"/>
+            </td>
+
+            <td Align="left">
+                <com:TLabel Text="Tlf Casa:"/>
+            </td>
+            <td ColumnSpan="3">
+                <com:TActiveTextBox ID="txt_tlf_casa"
+                    Columns="20"
+                    />
+            </td>
+        </tr>
+ <tr>
+            <td Align="left">
+                <com:TLabel Text="email"/>
+            </td>
+            <td>
+                <com:TActiveTextBox ID="txt_email"
+                    Columns="20"
+                    />
+                <com:TRequiredFieldValidator ID="val_email"
+                    ControlToValidate="txt_email"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"
+                    ValidationGroup="2"/>
+            </td>
+            <td Align="left">
+                <com:TLabel Text="email secundario"/>
+            </td>
+            <td>
+                <com:TActiveTextBox ID="txt_email2"
+                    Columns="20"
+                    />
+            </td>
+        </tr>
+ <tr>
+            <td Align="left">
+                <com:TLabel Text="Dirección Casa"/>
+            </td>
+            <td>
+                <com:TActiveTextBox ID="txt_dir_casa"
+                    Columns="30" textmode="MultiLine" Rows="3"
+                    />
+            </td>
+            <td Align="left">
+                <com:TLabel Text="Dirección Trabajo"/>
+            </td>
+            <td>
+                <com:TActiveTextBox ID="txt_dir_trabajo"
+                Columns="30" textmode="MultiLine" Rows="3"
+                    />
+            </td>
+        </tr>
+
+           <tr>
+               <td >
+                   <com:TLabel Text="Profesión:"/>
+               </td>
+            <td ColSpan="3">
+                
+
+
+                <com:TActiveTextBox ID="txt_profesion"
+                    Columns="20"
+                    />
+            </td>
+           </tr>
+        <tr>
+
+            <td colspan="4" align="center">
+
+                <com:TActiveButton ID="btn_incluir"
+                    Text="Guardar Cambios"
+                    OnCallBack="guardar"
+                    ValidationGroup="2"
+                    />
+            </td>
+        </tr>
+    </table>
+
+</fieldset>
+</div>
+</com:TContent>

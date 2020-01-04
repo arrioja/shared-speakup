@@ -1,0 +1,75 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+ <fieldset Align="Center" width="100%">
+    <legend>Configuración de permisos a usuarios individuales.</legend>
+    <com:TTable BorderWidth="1" GridLines="Both" Width="100%">
+
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell Width="30%" CssClass="titulos_claro_1">
+                <com:TLabel Text="Usuarios:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1">
+                <com:TActiveDropDownList ID="drop_cargos"
+                    DataTextField="info"
+                    AutoPostBack="true"
+                    OnCallback="muestra_datos"
+                    CausesValidation="false"
+                    DataValueField="id" >
+                    <prop:ClientSide
+                          OnLoading="Element.show('mensaje')"
+                          OnComplete="Element.hide('mensaje')"/>
+                </com:TActiveDropDownList>
+                <com:TRequiredFieldValidator
+                    ControlToValidate="drop_cargos"
+                    InitialValue="X"
+                    Text="Seleccione." />
+                <com:TActiveLabel ID="lbl_cod_cargo" Visible="False" Text="000"/>
+                <com:TActiveLabel ID="lbl_nom_cargo" Visible="False" Text="???"/>
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="El usuario puede:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1" ColumnSpan="3">
+            <com:TActiveCheckBox
+                ID="ch1"
+                AutoPostBack="False"
+                CausesValidation="False"
+                Text="Incluir Datos"/><br>
+            <com:TActiveCheckBox
+                ID="ch2"
+                AutoPostBack="False"
+                CausesValidation="False"
+                Text="Listar Datos"/><br>
+            <com:TActiveCheckBox
+                ID="ch3"
+                AutoPostBack="False"
+                CausesValidation="False"
+                Text="Consultar Datos"/><br>
+            <com:TActiveCheckBox
+                ID="ch4"
+                AutoPostBack="False"
+                CausesValidation="False"
+                Text="Modificar Datos"/><br>
+            <com:TActiveCheckBox
+                ID="ch5"
+                AutoPostBack="False"
+                CausesValidation="False"
+                Text="Eliminar Datos"/><br>
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow>
+            <com:TTableCell HorizontalAlign="Right" ColumnSpan="4">
+                <com:TActiveButton ID="btn_incluir"
+                    Enabled = "False"
+                    Text="Actualizar Restricciones"
+                    OnCallBack="btn_incluir_click"/>
+            </com:TTableCell>
+        </com:TTableRow>
+    </com:TTable>
+</fieldset>
+</div>
+</com:TContent>

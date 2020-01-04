@@ -1,0 +1,91 @@
+<com:TContent ID="cuerpo">
+
+    <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="99%">
+        <com:TTableRow VerticalAlign="Top">
+            
+            <com:TTableCell  HorizontalAlign="Center">
+                <div class="zxwidth_u">
+                    <b class="zxtop"><b class="zxb1"></b><b class="zxb2 zcolor_c"></b><b class="zxb3 zcolor_c"></b><b class="zxb4 zcolor_c"></b></b>
+                    <div class="zxboxcontent ">
+                        <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="100%">
+                            <com:TTableRow>
+                                <com:TTableCell ColumnSpan="5" CssClass="encabezado_claro_1" HorizontalAlign="Right">
+                                     <%% echo elabora_menu_grid($this);  %>
+                                </com:TTableCell>
+                            </com:TTableRow>
+                        </com:TTable>
+                    </div>
+                    <b class="zxbottom"><b class="zxb4"></b><b class="zxb3"></b><b class="zxb2"></b><b class="zxb1"></b></b>
+                </div>
+
+
+            </com:TTableCell>
+
+        </com:TTableRow>
+    </com:TTable>
+
+<div align="center">
+
+        <com:XActiveDataGrid
+            ID="DataGrid"
+            Width="90%"
+            PagerStyle.Mode="Numeric"
+            PagerStyle.HorizontalAlign="Center"
+            PageSize="20"
+            CellPadding="0"
+            CellSpacing="0"
+            GridLines="None"
+            HeaderStyle.BackColor="#29166F"
+            HeaderStyle.ForeColor="white"
+            HeaderStyle.Font.Size = "12px"
+            ItemStyle.BackColor="#BFCFFF"
+            ItemStyle.BorderColor="Black"
+            ItemStyle.Font.Size = "10px"
+            DataKeyField="id"
+            AlternatingItemStyle.BackColor="#E6ECFF"
+            AutoGenerateColumns="false"
+            ForeColor="black"
+            Caption="Artículos Marcados como Interesantes (Favoritos)"
+            BorderColor="black"
+            OnItemCreated="itemCreated"
+            OnItemDataBound="formatear"
+            >
+                <com:XActiveTemplateColumn
+                ID="imagen"
+                HeaderText="Imágen"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderStyle.Width="50px"
+                >
+                    <prop:ItemTemplate>
+                        <com:TActiveImage Height="30px" Width="30px" ImageUrl=<%# $this->Parent->DataItem['imagen_1'] %> />
+                    </prop:ItemTemplate>
+                </com:XActiveTemplateColumn>
+
+            <com:XActiveBoundColumn
+                ID="titulo"
+                DataField="titulo"
+                HeaderText="Artículo"/>
+
+            <com:XActiveBoundColumn
+                ID="precio"
+                DataField="precio"
+                HeaderText="Precio (Bs.F)"
+                ItemStyle.HorizontalAlign="Right"/>
+
+                <com:XActiveTemplateColumn
+                ID="detalle"
+                HeaderText="Acciones"
+                ItemStyle.HorizontalAlign="Center"
+                >
+                    <prop:ItemTemplate>
+                        <com:TActiveLinkButton Display="Dynamic" CommandParameter="<%# $this->Parent->DataItem['cod_articulo'] %>" Text="<img alt='Ver' src='imagenes/iconos/detalle.png' border='0' />" OnClick="Page.ver_articulo" />
+                        <com:TActiveLinkButton ID="finaliza" CommandParameter="<%# $this->Parent->DataItem['cod_articulo'] %>" Text="<img src='imagenes/iconos/rechazar.png' border='0' />" OnClick="Page.eliminar_favorito" />
+                    </prop:ItemTemplate>
+                </com:XActiveTemplateColumn>
+
+        </com:XActiveDataGrid>
+
+
+    <br>
+</div>
+</com:TContent>

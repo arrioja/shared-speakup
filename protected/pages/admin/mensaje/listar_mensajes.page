@@ -1,0 +1,30 @@
+<com:TContent ID="cuerpo">
+<br>
+<com:TRepeater ID="Repeater" EnableViewState="false">
+    <prop:HeaderTemplate>
+    </prop:HeaderTemplate>
+
+    <prop:ItemTemplate>
+        <com:TTable Width="70%" BorderWidth="1" GridLines="Both" CellPadding="3" CellSpacing="0">
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell Width="20%" RowSpan="2" HorizontalAlign="Center" CssClass="titulos_claro_1">
+                 <com:TImage ImageUrl="imagenes/botones/<%#$this->Data['imagen'] %>" Height="128" Width="128" ID="imagen"></com:TImage>
+            </com:TTableCell>
+            <com:TTableCell ColumnSpan="2" HorizontalAlign="Center" CssClass="encabezado_claro_1">
+                 <com:TLabel ID="lbl_titulo" Text="<%#$this->Data['titulo'] %>" />
+            </com:TTableCell>
+           </com:TTableRow>
+           <com:TTableRow>
+               <com:TTableCell ColumnSpan="2" HorizontalAlign="Justify" CssClass="datos_claro_1">
+                 <com:TLabel ID="lbl_mensaje" Text="<%#$this->Data['mensaje'] %>" />.</div>
+             </com:TTableCell>
+           </com:TTableRow>
+        </com:TTable>
+        <br><br>
+    </prop:ItemTemplate>
+
+    <prop:FooterTemplate>
+    </prop:FooterTemplate>
+</com:TRepeater>
+
+</com:TContent>

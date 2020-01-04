@@ -1,0 +1,12 @@
+<com:TContent ID="cuerpo">
+        <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="100%">
+            <com:TTableRow>
+                <com:TTableCell HorizontalAlign="Center">
+
+
+                contenido
+
+                </com:TTableCell>
+            </com:TTableRow>
+        </com:TTable>
+</com:TContent>

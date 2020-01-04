@@ -1,0 +1,71 @@
+<com:TContent ID="cuerpo">
+<br>
+<com:MensajeDiv ID="cargando"/>
+<div align="center">
+<com:TTable BorderWidth="1" GridLines="Both" Width="90%">
+    <com:TTableRow BorderWidth="1">
+        <com:TTableCell HorizontalAlign="Right">
+            <com:TLabel Text="Pa&iacute;s:"/>
+        </com:TTableCell>
+        <com:TTableCell>
+            <com:TActiveDropDownList ID="drop_paises"
+                DataTextField="nombre_pais"
+                AutoPostBack="true"
+                PromptText="Seleccione"
+                PromptValue="X"
+                OnCallback="actualiza_listado"
+                DataValueField="cod_pais">
+                     <prop:ClientSide
+                          OnLoading="Element.show('mensaje')"
+                          OnComplete="Element.hide('mensaje')"/>
+            </com:TActiveDropDownList>
+            <com:TRequiredFieldValidator
+                ControlToValidate="drop_paises"
+                InitialValue="X"
+                Text="Seleccione." />
+        </com:TTableCell>
+    </com:TTableRow>
+</com:TTable>
+            <com:XActiveDataGrid
+                ID="DataGrid"
+                Width="90%"
+                CellPadding="0"
+                CellSpacing="0"
+                GridLines="Both"
+                HeaderStyle.BackColor="#29166F"
+                HeaderStyle.ForeColor="white"
+                ItemStyle.BackColor="#BFCFFF"
+                ItemStyle.BorderColor="white"
+                DataKeyField="id"
+                OnEditCommand="editItem"
+                OnDeleteCommand="anularItem"
+                AlternatingItemStyle.BackColor="#E6ECFF"
+                AutoGenerateColumns="false"
+                Caption="Listado de Estados"
+                ForeColor="black"
+                BorderColor="black"
+                EmptyTemplate="<div style='font-size:14px;
+                           color:#FF0000;
+                           height:100px;
+                           font-weight:bold;
+                           vertical-align:middle;
+                           padding-top:40px;'>
+                <br>Listado de Estados. <br><br>
+                No existen datos suficientes para realizar el listado.</div>"
+                >
+                    <com:XActiveBoundColumn
+                    ID="cod_estado"
+                    HeaderStyle.Width="120px"
+                    HeaderText="C&oacute;digo"
+                    DataField="cod_estado"
+                    ItemStyle.HorizontalAlign="Center"
+                    />
+                    <com:XActiveBoundColumn
+                    ID="nombre_estado"
+                    HeaderText="Nombre"
+                    DataField="nombre_estado"
+                    />
+            </com:XActiveDataGrid>
+</div>
+
+</com:TContent>

@@ -1,0 +1,102 @@
+<%@ Title="Listado de Estudiantes" %>
+<com:TContent ID="cuerpo">
+<br/>
+
+<div  id="loading" style="display:none;     width: 90%;
+     text-align: center;
+    "
+				><img ID='loading' src='imagenes/iconos/loadinfo.gif'>
+			</div>
+<div align="center">
+<com:XActiveDataGrid
+Caption="Listado de Estudiantes"
+	ID="DataGrid"
+	AllowPaging="false"
+	Width="90%"
+	PageSize="24"
+	PagerStyle.Mode="Numeric"
+	CellPadding="0"
+	CellSpacing="0"
+	GridLines="Both"
+	DataKeyField="id"
+	HeaderStyle.BackColor="#29166F"
+	HeaderStyle.ForeColor="white"
+	ItemStyle.BackColor="#BFCFFF"
+    ItemStyle.BorderColor="white"
+	AlternatingItemStyle.BackColor="#E6ECFF" 
+	OnPageIndexChanged="changePage"
+	OnPagerCreated="pagerCreated"
+	AutoGenerateColumns="false"
+    EmptyTemplate="<div style='font-size:14px;
+                           color:#FF0000;
+                           height:100px;
+                           font-weight:bold;
+                           vertical-align:middle;
+                           padding-top:40px;'>
+                <br>
+                No existen datos suficientes para realizar el listado.</div>">
+
+
+  >
+
+          <prop:ClientSide
+              OnLoading="Element.show('loading')"
+              OnComplete="Element.hide('loading')"
+            />
+
+		<com:XActiveBoundColumn
+		ID="cedula"
+		HeaderText="CEDULA"
+		DataField="cedula"
+		HeaderStyle.Width="60px"
+        ItemStyle.HorizontalAlign="Center"
+
+		/>
+		<com:XActiveBoundColumn
+		ID="nombres"
+		HeaderText="NOMBRES"
+		DataField="nombres"
+		HeaderStyle.Width="100px"
+        ItemStyle.HorizontalAlign="Center"
+		/>
+
+		<com:XActiveBoundColumn
+		ID="apellidos"
+		HeaderText="APELLIDOS"
+		HeaderStyle.Width="100px"
+		DataField="apellidos"
+		ItemStyle.HorizontalAlign="Center"
+
+		/>
+		<com:XActiveBoundColumn
+		ID="programa"
+		HeaderText="PROGRAMA"
+		HeaderStyle.Width="50px"
+		DataField="programa"
+		ItemStyle.HorizontalAlign="Center"
+
+		/>
+        <com:XActiveBoundColumn
+		ID="nivel"
+		HeaderText="NIVEL"
+		HeaderStyle.Width="50px"
+		DataField="nivel_actual"
+		ItemStyle.HorizontalAlign="Center"
+        />
+
+
+</com:XActiveDataGrid>
+</div>
+<table Width="90%" aling="center" >
+    <tr>
+    <td aling="center">
+        <div align="center"><com:TButton BorderWidth="0" ID="btn_volver"
+                    Text="Regresar"
+                    OnClick="regresar"
+                    />
+                    </div>
+    </td>
+    </tr>
+    </table>
+
+</com:TContent>

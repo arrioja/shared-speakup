@@ -1,0 +1,797 @@
+            <com:TTableCell  HorizontalAlign="Center">
+
+                <div class="zxwidth_u">
+                    <b class="zxtop"><b class="zxb1"></b><b class="zxb2 zcolor_c"></b><b class="zxb3 zcolor_c"></b><b class="zxb4 zcolor_c"></b></b>
+                    <div class="zxboxcontent ">
+                        <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="Both" Width="100%">
+                            <com:TTableRow>
+                                <com:TTableCell Width=<%= $this->ancho_hora %>  CssClass="encabezado_claro_1">
+                                     Hora
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                     Lunes<br>
+                                     <com:TActiveLabel ID="lbl_lunes" Text="??/??/????"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                     Martes<br>
+                                     <com:TActiveLabel ID="lbl_martes" Text="??/??/????"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                     Miércoles<br>
+                                     <com:TActiveLabel ID="lbl_miercoles" Text="??/??/????"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                     Jueves<br>
+                                     <com:TActiveLabel ID="lbl_jueves" Text="??/??/????"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                     Viernes<br>
+                                     <com:TActiveLabel ID="lbl_viernes" Text="??/??/????"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                     Sábado<br>
+                                     <com:TActiveLabel ID="lbl_sabado" Text="??/??/????"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     9
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#ffa800">
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/class_1.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#04b800">
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/class_2.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#ff1200">
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/class_3.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#5c58ff">
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/test_1' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     10
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     11
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     12
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     13
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     14
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     15
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     16
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     17
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     18
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     19
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+
+                            <com:TTableRow>
+                                <com:TTableCell CssClass="encabezado_claro_1">
+                                     20
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %>>
+                                    <com:TActiveLinkButton Width=<%= $this->ancho %> Height=<%= $this->alto %> CommandParameter="1" Text="<img src='imagenes/class_board/blank.png' border='0' width='<%= $this->ancho %>' height='<%= $this->alto %>'/>" OnClick="reservar_clase" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                                <com:TTableCell Width=<%= $this->ancho %> Height=<%= $this->alto %> BackColor="#808080">
+                                    <com:TImage Width=<%= $this->ancho %> Height=<%= $this->alto %> BorderStyle="0"  ImageUrl="imagenes/class_board/blocked.png"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+                            <com:TTableRow>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                    <com:TActiveLinkButton Width="32px" Height="32px" CommandParameter="1" Text="<img src='imagenes/iconos/ir_izquierda.png' border='0' width='32px' height='32px'/>" OnClick="ir_izquierda" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="13"  CssClass="encabezado_claro_1">
+                                    <com:TActiveLinkButton Width="32px" Height="32px" CommandParameter="1" Text="<img src='imagenes/iconos/ir_actual.png' border='0' width='32px' height='32px'/>" OnClick="ir_actual" CausesValidation="False" />
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3" CssClass="encabezado_claro_1">
+                                    <com:TActiveLinkButton Width="32px" Height="32px" CommandParameter="1" Text="<img src='imagenes/iconos/ir_derecha.png' border='0' width='32px' height='32px'/>" OnClick="ir_derecha" CausesValidation="False" />
+                                </com:TTableCell>
+                            </com:TTableRow>
+                        </com:TTable>
+                    </div>
+                    <b class="zxbottom"><b class="zxb4"></b><b class="zxb3"></b><b class="zxb2"></b><b class="zxb1"></b></b>
+                </div>
+
+
+            </com:TTableCell>

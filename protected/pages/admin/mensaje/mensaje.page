@@ -1,0 +1,29 @@
+<com:TContent ID="cuerpo">
+<br>
+<br>
+<br>
+<com:TTable Width="70%" BorderWidth="1" GridLines="Both" CellPadding="3" CellSpacing="0">
+    <com:TTableRow CssClass="encabezado_claro_1" BorderWidth="1">
+        <com:TTableCell Width="20%" RowSpan="2" HorizontalAlign="Center" CssClass="titulos_claro_1">
+            <com:TImage ImageUrl="imagenes/botones/password.png" Height="128" Width="128" ID="imagen"></com:TImage>
+        </com:TTableCell>
+        <com:TTableCell ColumnSpan="2" CssClass="encabezado_claro_1">
+            <com:TLabel ID="lbl_titulo" Text="T&iacute;tulo del Mensaje" />
+        </com:TTableCell>
+   </com:TTableRow>
+   <com:TTableRow>
+     <com:TTableCell ColumnSpan="2" CssClass="datos_claro_1">
+         <div align="justify"><com:TLabel ID="lbl_mensaje" Text="Texto del Mensaje" />.</div>
+     </com:TTableCell>
+   </com:TTableRow>
+      <com:TTableRow>
+     <com:TTableCell ColumnSpan="3" CssClass="datos_claro_1">
+       <div align="center">
+        <com:TButton ID="inicio"
+            Text="Inicio"
+            OnClick="btn_click"/>
+       </div>
+     </com:TTableCell>
+   </com:TTableRow>
+  </com:TTable>
+</com:TContent>

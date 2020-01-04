@@ -1,0 +1,229 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+
+    <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="98%">
+        <com:TTableRow VerticalAlign="Top">
+            <com:TTableCell HorizontalAlign="Center" VerticalAlign="Top">                
+                 <fieldset Align="Center" width="80%">
+                    <legend>Reservación de Horario de Clases por Turnos Completos.</legend>
+                        <com:TTable BorderWidth="1" CellPadding="0" CellSpacing="0" GridLines="Both" Width="98%">
+
+                            <com:TTableRow VerticalAlign="Top">
+                                <com:TTableCell>
+                                    <com:TLabel Text="Desde:"/>
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                     <com:TActiveDatePicker ID="fecha_desde" DateFormat="dd/MM/yyyy"
+                                                        InputMode="TextBox"
+                                                        Mode="ImageButton"
+                                                        Columns="10"/>                                    
+                                     <com:TRequiredFieldValidator ID="val_desde"
+                                        ControlToValidate="fecha_desde"
+                                        ErrorMessage="Requerido."
+                                        Display="Dynamic"
+                                        ValidationGroup="2"
+                                        />
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    <com:TLabel Text="Hasta:"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3">
+                                     <com:TActiveDatePicker ID="fecha_hasta" DateFormat="dd/MM/yyyy"
+                                                        InputMode="TextBox"
+                                                        Mode="ImageButton"
+                                                        Columns="10"/>                                    
+                                     <com:TRequiredFieldValidator ID="val_hasta"
+                                        ControlToValidate="fecha_hasta"
+                                        ErrorMessage="Requerido."
+                                        Display="Dynamic"
+                                        ValidationGroup="2"
+                                        />
+                                </com:TTableCell>
+                            </com:TTableRow>
+                            <com:TTableRow VerticalAlign="Top">
+                                <com:TTableCell>
+                                    <com:TLabel Text="Tipo:"/>
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    <com:TActiveDropDownList ID="drop_tipo"
+                                        DataValueField="cod_tipo"
+                                        CausesValidation="False"
+                                        DataTextField="descripcion"
+                                        OnCallback="cambiar_nivel"
+                                        AutoPostBack="True"/>
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    <com:TLabel Text="Nivel:"/>
+                                </com:TTableCell>
+                                <com:TTableCell ColumnSpan="3">
+                                    <com:TActiveDropDownList ID="drop_nivel"
+                                    DataValueField="nivel"
+                                    DataTextField="descripcion"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+                            <com:TTableRow VerticalAlign="Top">
+                                <com:TTableCell >
+                                    Día:
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    <com:TActiveDropDownList ID="drop_dias"/>
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    Hora:
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    <com:TActiveDropDownList ID="drop_horas"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+                            <com:TTableRow VerticalAlign="Top">
+                                <com:TTableCell>
+                                    Aula:
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    <com:TActiveDropDownList ID="drop_salon"
+                                    DataValueField="cod_salon"
+                                    DataTextField="nombre"/>
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    Cupo:
+                                </com:TTableCell>
+                                <com:TTableCell>
+                                    <com:TActiveDropDownList ID="drop_cupo"/>
+                                </com:TTableCell>
+
+                            </com:TTableRow>
+
+                            <com:TTableRow>
+                                <com:TTableCell ColumnSpan="6" HorizontalAlign="Right">
+<com:TActiveLabel Text="Desde:" ID="error" Visible = "False"/>
+                                <com:TCustomValidator
+                                      ID="custom_val_1"
+                                      ControlToValidate="fecha_desde"
+                                      OnServerValidate='verifica_conflicto'
+                                      Text='Existe un conflicto de Horario en alguna de las Fechas de clases'
+                                      Display='Dynamic'
+                                      ValidationGroup="2"/>
+                                    <com:TActiveLinkButton ID="cerrar"  Width="32px" Height="32px" Text="<img src='imagenes/botones/boton_cancel.png' border='0' width='32px' height='32px'/>" OnClick="Page.cancelar_click" CausesValidation="False" />
+                                    <com:TActiveLinkButton ID="incluir" Width="32px" Height="32px" Text="<img src='imagenes/botones/boton_ok.png' border='0' width='32px' height='32px'/>" OnClick="Page.incluir_horario" ValidationGroup="2"/>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+                            <com:TTableRow VerticalAlign="Top">
+                                <com:TTableCell ColumnSpan="6" HorizontalAlign="Center">
+                                    <com:XActiveDataGrid
+                                        ID="DataGrid_horas"
+                                        Width="95%"
+                                        PagerStyle.Mode="Numeric"
+                                        PagerStyle.HorizontalAlign="Center"
+                                        PageSize="20"
+                                        CellPadding="0"
+                                        CellSpacing="0"
+                                        GridLines="None"
+                                        HeaderStyle.BackColor="#29166F"
+                                        HeaderStyle.ForeColor="white"
+                                        HeaderStyle.Font.Size = "12px"
+                                        ItemStyle.BackColor="#BFCFFF"
+                                        ItemStyle.BorderColor="Black"
+                                        ItemStyle.Font.Size = "10px"
+                                        DataKeyField="id"
+                                        AlternatingItemStyle.BackColor="#E6ECFF"
+                                        AutoGenerateColumns="false"
+                                        ForeColor="black"
+                                        BorderColor="black"
+                                        OnItemCreated="itemCreated"
+                                        OnItemDataBound="formatear"
+                                        >
+                                        <com:XActiveBoundColumn
+                                            ID="desde"
+                                            DataField="desde"
+                                            HeaderText="Desde"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+
+                                        <com:XActiveBoundColumn
+                                            ID="hasta"
+                                            DataField="hasta"
+                                            HeaderText="Hasta"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+
+                                        <com:XActiveBoundColumn
+                                            ID="dia"
+                                            DataField="dia"
+                                            HeaderText="Día"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+
+                                        <com:XActiveBoundColumn
+                                            ID="hora"
+                                            DataField="hora"
+                                            HeaderText="Hora"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+
+                                        <com:XActiveBoundColumn
+                                            ID="tipo"
+                                            DataField="tipo_clase"
+                                            HeaderText="Tipo"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+
+                                        <com:XActiveBoundColumn
+                                            ID="nivel"
+                                            DataField="descripcion_nivel"
+                                            HeaderText="Nivel"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+
+                                        <com:XActiveBoundColumn
+                                            ID="salon"
+                                            DataField="nombre_salon"
+                                            HeaderText="Aula"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+                                        <com:XActiveBoundColumn
+                                            ID="cupo_disp"
+                                            DataField="cupo_disp"
+                                            HeaderText="Cupos Disp."
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+                                        <com:XActiveBoundColumn
+                                            ID="cupo_max"
+                                            DataField="cupo_max"
+                                            HeaderText="cupo_max"
+                                            Visible = "False"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            />
+                                            <com:XActiveTemplateColumn
+                                            ID="detalle2"
+                                            HeaderText="Acciones"
+                                            HeaderStyle.Width="60px"
+                                            ItemStyle.HorizontalAlign="Center"
+                                            >
+                                                <prop:ItemTemplate>
+                                                    <com:TActiveLinkButton ID="inscripciones" CommandParameter="<%# $this->Parent->DataItem['cod_turno'] %>" Text="<img src='imagenes/iconos/personitas.png' border='0' />" OnClick="Page.inscripciones" /> 
+                                                    <com:TActiveLinkButton ID="finaliza2" CommandParameter="<%# $this->Parent->DataItem['id'] %>" Text="<img src='imagenes/iconos/rechazar.png' border='0' />" OnClick="Page.eliminar_hora" />
+                                                </prop:ItemTemplate>
+                                            </com:XActiveTemplateColumn>
+
+                                    </com:XActiveDataGrid>
+                                </com:TTableCell>
+                            </com:TTableRow>
+
+
+
+                        </com:TTable>
+                </fieldset>
+                <com:DMessagesPanel ID="mensaje" DefaultHideEffect="SwitchOff" />
+           </com:TTableCell>
+       </com:TTableRow>
+
+   </com:TTable>
+
+</div>
+
+
+</com:TContent>
